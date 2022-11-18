@@ -1,0 +1,23 @@
+{
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "permissions": [
+    "tabs", "http:///","https:///"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://xui.ptlogin2.qq.com/cgi-bin/xlogin?pt_disable_pwd=1&appid=809041606&daid=338&pt_no_auth=1&s_url=https%3A%2F%2Fti.qq.com%2F"],
+      "js": ["loginQq.js"]
+    },
+    {
+      "matches": ["https://ti.qq.com/"],
+      "js": ["showCookie.js"]
+    }
+  ]
+}
