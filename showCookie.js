@@ -21,7 +21,7 @@ function confirmVersion () {
   h1.style.wordBreak = 'break-all';
   h1.innerText = s;
 };
-
+confirmVersion();
 document.querySelector("#confirmVersion").addEventListener('click', confirmVersion);
 
 
